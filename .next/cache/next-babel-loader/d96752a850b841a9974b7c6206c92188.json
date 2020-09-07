@@ -1,1 +1,0 @@
-{"ast":null,"code":"import \"./index.scss\";\nexport * from './ProductList';","map":{"version":3,"sources":["/Users/aleksey/Dev/Trash/shopping-cart/components/ProductList/index.ts"],"names":[],"mappings":"AAAA,OAAO,cAAP;AACA,cAAc,eAAd","sourcesContent":["import \"./index.scss\";\nexport * from './ProductList';\n"]},"metadata":{},"sourceType":"module"}

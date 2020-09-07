@@ -1,1 +1,0 @@
-{"ast":null,"code":"export * from './ProductsList';","map":{"version":3,"sources":["/Users/aleksey/Dev/Trash/shopping-cart/components/ProductsList/index.ts"],"names":[],"mappings":"AAAA,cAAc,gBAAd","sourcesContent":["export * from './ProductsList';\n"]},"metadata":{},"sourceType":"module"}
