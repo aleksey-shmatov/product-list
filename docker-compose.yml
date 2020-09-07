@@ -22,7 +22,7 @@ services:
             DB_PASSWORD: '${DB_PASSWORD}'
             DB_PORT: ${DB_PORT}
         volumes:
-            - ./src:/src/
+            - ./:/app
         ports:
             - 3000:3000
         depends_on:
