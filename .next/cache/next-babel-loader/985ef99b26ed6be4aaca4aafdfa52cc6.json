@@ -1,0 +1,1 @@
+{"ast":null,"code":"export let ProductType;\n\n(function (ProductType) {\n  ProductType[\"shirt\"] = \"shirt\";\n  ProductType[\"pants\"] = \"pants\";\n})(ProductType || (ProductType = {}));\n\nexport const productTypes = Object.values(ProductType);","map":null,"metadata":{},"sourceType":"module"}

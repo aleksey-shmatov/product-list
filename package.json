@@ -1,0 +1,60 @@
+{
+   "name": "product-list",
+   "version": "0.1.0",
+   "private": true,
+   "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "eslint '*/**/*.{js,ts,tsx}' --fix",
+      "migration:generate": "TS_NODE_PROJECT=tsconfig.ts-node.json TS_NODE_TRANSPILE_ONLY=true ts-node ./node_modules/typeorm/cli.js migration:generate -n",
+      "migration:run": "TS_NODE_PROJECT=tsconfig.ts-node.json TS_NODE_TRANSPILE_ONLY=true ts-node ./node_modules/typeorm/cli.js migration:run",
+      "migration:revert": "TS_NODE_PROJECT=tsconfig.ts-node.json TS_NODE_TRANSPILE_ONLY=true ts-node ./node_modules/typeorm/cli.js migration:revert",
+      "generate": "graphql-codegen",
+      "init": "npm run migration:run && npm run dev"
+   },
+   "dependencies": {
+      "@apollo/client": "^3.1.4",
+      "@graphql-codegen/cli": "^1.17.8",
+      "@graphql-codegen/typescript-operations": "^1.17.8",
+      "apollo-server-micro": "^2.17.0",
+      "class-validator": "^0.12.2",
+      "cross-fetch": "^3.0.5",
+      "dotenv": "^8.2.0",
+      "graphql": "^15.3.0",
+      "mysql": "^2.14.1",
+      "next": "9.3.5",
+      "react": "16.13.1",
+      "react-dom": "16.13.1",
+      "reflect-metadata": "^0.1.10",
+      "sass": "^1.26.10",
+      "type-graphql": "^1.0.0",
+      "typeorm": "^0.2.25"
+   },
+   "devDependencies": {
+      "@babel/plugin-proposal-class-properties": "^7.10.4",
+      "@babel/plugin-proposal-decorators": "^7.10.5",
+      "@graphql-codegen/typescript": "^1.17.9",
+      "@types/knex": "^0.16.1",
+      "@types/node": "^8.0.29",
+      "@types/react": "^16.9.49",
+      "@typescript-eslint/eslint-plugin": "^4.0.1",
+      "@typescript-eslint/parser": "^4.0.1",
+      "babel-plugin-transform-typescript-metadata": "^0.3.0",
+      "eslint": "^7.8.1",
+      "eslint-config-prettier": "^6.11.0",
+      "eslint-plugin-jsx-a11y": "^6.3.1",
+      "eslint-plugin-prettier": "^3.1.4",
+      "eslint-plugin-react": "^7.20.6",
+      "eslint-plugin-react-hooks": "^4.1.0",
+      "husky": "^4.2.5",
+      "prettier": "^2.1.1",
+      "ts-node": "^3.3.0",
+      "typescript": "3.3.3333"
+   },
+   "husky": {
+      "hooks": {
+         "pre-commit": "npm run lint"
+      }
+   }
+}

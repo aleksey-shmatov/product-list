@@ -1,0 +1,10 @@
+schema: ./generated/schema.gql
+documents: ./components/**/*.tsx
+generates:
+  ./generated/index.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+    config:
+      scalars:
+        ID: number

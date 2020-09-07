@@ -1,0 +1,57 @@
+@import './vars.scss';
+@import './products.scss';
+@import './add-products.scss';
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  height: 2rem;
+  min-width: 5rem;
+}
+
+input {
+  height: 1.5rem;
+}
+
+select {
+  height: 1.8rem;
+  line-height: 1.8rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: $container-width-lg;
+
+  @media (max-width: $breakpoint-md) {
+    max-width: $container-width-md;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    max-width: $container-width-sm;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    max-width: auto;
+  }
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+
+  &__header {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  &__action {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+  }
+}

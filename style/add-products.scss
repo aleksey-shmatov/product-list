@@ -1,0 +1,45 @@
+.add-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__button {
+    margin: 1rem;
+    min-width: 12rem;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+
+  &__fields {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    row-gap: 1rem;
+    align-items: baseline;
+
+    @media (max-width: $breakpoint-sm) {
+      grid-template-columns: 1fr;
+    }
+
+    &__label {
+      min-width: 8rem;
+    }
+  }
+
+  &__error {
+    margin-top: 1rem;
+    color: orangered;
+  }
+
+  &__actions {
+    margin-top: 1rem;
+
+    &__item {
+      margin-right: 1rem;
+    }
+  }
+}
