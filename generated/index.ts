@@ -29,13 +29,16 @@ export type Mutation = {
   removeProduct: Scalars['ID'];
 };
 
+
 export type MutationAddPantsArgs = {
   data: AddPantsInput;
 };
 
+
 export type MutationAddShirtArgs = {
   data: AddShirtInput;
 };
+
 
 export type MutationRemoveProductArgs = {
   id: Scalars['ID'];
@@ -59,7 +62,7 @@ export type Product = {
 
 export enum ProductType {
   Pants = 'pants',
-  Shirt = 'shirt',
+  Shirt = 'shirt'
 }
 
 export type Query = {
@@ -79,28 +82,56 @@ export type Shirt = Product & {
 export enum ShirtColor {
   Blue = 'blue',
   Grey = 'grey',
-  White = 'white',
+  White = 'white'
 }
+
+export type AddPantsMutationVariables = Exact<{
+  input: AddPantsInput;
+}>;
+
+
+export type AddPantsMutation = (
+  { __typename?: 'Mutation' }
+  & { addPants: (
+    { __typename?: 'Pants' }
+    & Pick<Pants, 'id' | 'name' | 'type' | 'color' | 'width' | 'length'>
+  ) }
+);
 
 export type AddShirtMutationVariables = Exact<{
   input: AddShirtInput;
 }>;
 
-export type AddShirtMutation = { __typename?: 'Mutation' } & {
-  addShirt: { __typename?: 'Shirt' } & Pick<Shirt, 'id' | 'name' | 'type' | 'color' | 'size'>;
-};
 
-export type ProductsQueryVariables = Exact<{ [key: string]: never }>;
+export type AddShirtMutation = (
+  { __typename?: 'Mutation' }
+  & { addShirt: (
+    { __typename?: 'Shirt' }
+    & Pick<Shirt, 'id' | 'name' | 'type' | 'color' | 'size'>
+  ) }
+);
 
-export type ProductsQuery = { __typename?: 'Query' } & {
-  products: Array<
-    | ({ __typename?: 'Pants' } & Pick<Pants, 'color' | 'width' | 'length' | 'id' | 'name' | 'type'>)
-    | ({ __typename?: 'Shirt' } & Pick<Shirt, 'size' | 'id' | 'name' | 'type'> & { shirtColor: Shirt['color'] })
-  >;
-};
+export type ProductsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type ProductsQuery = (
+  { __typename?: 'Query' }
+  & { products: Array<(
+    { __typename?: 'Pants' }
+    & Pick<Pants, 'color' | 'width' | 'length' | 'id' | 'name' | 'type'>
+  ) | (
+    { __typename?: 'Shirt' }
+    & Pick<Shirt, 'size' | 'id' | 'name' | 'type'>
+    & { shirtColor: Shirt['color'] }
+  )> }
+);
 
 export type RemoveProductMutationVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
-export type RemoveProductMutation = { __typename?: 'Mutation' } & Pick<Mutation, 'removeProduct'>;
+
+export type RemoveProductMutation = (
+  { __typename?: 'Mutation' }
+  & Pick<Mutation, 'removeProduct'>
+);

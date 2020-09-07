@@ -22,6 +22,7 @@ I used TypeGraphql to implement Graphql schema and graphql-codegen to generate c
 
 
 ## Missing functionality
-Better error handling on client and server
-Client-side form validation
-Unit/Integration tests
+
+Better error handling on client and server.
+Client-side form validation.
+Unit/Integration tests.
